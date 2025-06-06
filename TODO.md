@@ -1,0 +1,4 @@
+- Make the grid sizable witha slider or a button
+- Paint only when click, or be able to toggle between allways paint and only when right click.
+- Change colors
+- Add eraser
