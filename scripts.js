@@ -2,6 +2,9 @@ const container = document.getElementById("main-grid");
 let isMouseDown = false;
 let isCKeyDown = false;
 
+const enable_hover_button = document.querySelector(".button1");
+const 
+
 // Track mouse state globally
 document.addEventListener('mousedown', () => {
   isMouseDown = true;
