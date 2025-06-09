@@ -11,18 +11,6 @@ document.addEventListener('mouseup', () => {
   isMouseDown = false;
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'c') {
-    isCKeyDown = true;
-  }
-});
-
-document.addEventListener('keyup', (event) => {
-  if (event.key === 'c') {
-    isCKeyDown = false;
-  }
-});
-
 // Create grid
 for (let i = 0; i < 64 * 64; i++) {
   const cell = document.createElement("div");
