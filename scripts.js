@@ -1,5 +1,6 @@
 const container = document.getElementById("main-grid");
 let isMouseDown = false;
+let isCKeyDown = false;
 
 // Track mouse state globally
 document.addEventListener('mousedown', () => {
@@ -10,8 +11,20 @@ document.addEventListener('mouseup', () => {
   isMouseDown = false;
 });
 
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'c') {
+    isCKeyDown = true;
+  }
+});
+
+document.addEventListener('keyup', (event) => {
+  if (event.key === 'c') {
+    isCKeyDown = false;
+  }
+});
+
 // Create grid
-for (let i = 0; i < 32 * 32; i++) {
+for (let i = 0; i < 64 * 64; i++) {
   const cell = document.createElement("div");
   cell.classList.add("grid_divs");
   container.appendChild(cell);
@@ -23,7 +36,7 @@ for (let i = 0; i < 32 * 32; i++) {
 
   // Paint on drag
   cell.addEventListener('mouseover', () => {
-    if (isMouseDown) {
+    if (isMouseDown || isCKeyDown) {
       cell.style.backgroundColor = "blue";
     }
   });

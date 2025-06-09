@@ -9,8 +9,12 @@
 
 .grid_divs {
     border: 1px solid black;
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     background-color: lightgray;
     box-sizing: border-box;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
 }

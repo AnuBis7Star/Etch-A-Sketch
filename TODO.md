@@ -1,4 +1,5 @@
 - Make the grid sizable witha slider or a button
-- Paint only when click, or be able to toggle between allways paint and only when right click.
+- [DONE] Paint only when click, or be able to toggle between allways paint and only when right click.
+- [DONE] Fix click once no paint bug.
 - Change colors
 - Add eraser
