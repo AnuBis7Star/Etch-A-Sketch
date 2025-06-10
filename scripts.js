@@ -3,22 +3,20 @@ let isMouseDown = false;
 let isCKeyDown = false;
 let paintAllways = false;
 let squaresPerSide = 64;
-
 let squareSize = 640 / squaresPerSide;
 
 const grid_divs = document.querySelectorAll("#grid_divs");
-
 const grid_size_button = document.getElementById("grid-size"); 
 const enable_hover_button = document.getElementById("button1");
 const disable_hover_button = document.getElementById("button2");
 
-const cell = document.createElement("div");
+draw_grid(squaresPerSide);
 
 grid_size_button.addEventListener("click", () => {
-  squaresPerSide = window.prompt("Input size of grid (max 100 per side) ", "64");
-  cell.style.width = squareSize;
-  cell.style.height = squareSize;
-  draw_grid(cell.style.width);
+  container.innerHTML = "";
+  squaresPerSide = Number(window.prompt("Input size of grid (max 100 per side) ", "64"));
+  squareSize = 640 / squaresPerSide;
+  draw_grid(squaresPerSide);
 })
 
 enable_hover_button.addEventListener("click", () => {
@@ -45,6 +43,8 @@ function draw_grid(size) {
 
   for (let i = 0; i < size * size; i++) {
     const cell = document.createElement("div");
+    cell.style.width = `${squareSize}px`;
+    cell.style.height = `${squareSize}px`;
     cell.classList.add("grid_divs");
     container.appendChild(cell);
 
