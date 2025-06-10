@@ -25,7 +25,6 @@ grid_size_button.addEventListener("click", () => {
   draw_grid(squaresPerSide);
 });
 
-
 enable_hover_button.addEventListener("click", () => {
   console.log("Button Clicked");
   paintAllways = true;
@@ -47,7 +46,6 @@ document.addEventListener('mouseup', () => {
 
 // Create grid
 function draw_grid(size) {
-
   for (let i = 0; i < size * size; i++) {
     const cell = document.createElement("div");
     cell.style.width = `${squareSize}px`;
